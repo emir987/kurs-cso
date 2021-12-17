@@ -8,6 +8,7 @@
     <link rel="stylesheet" href='css/app.css'>
 </head>
 <body>
+    @include('nav.nav')
     @yield('body')
     <script src='js/app.js'></script>
 </body>
