@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('homepage');
 });
 
+//promjena
+
 Route::get('/about', function () {
     return view('about');
 });
