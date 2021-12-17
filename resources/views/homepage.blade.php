@@ -3,7 +3,7 @@
 @section('title', 'Homepage')
 
 @section('body')
-    <h1>Homepage</h1>
+    <h1>Hello, {{ $name1 }}</h1>
     <form>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email address</label>

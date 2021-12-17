@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-})->name('homepage');
+// Route::get('/', function () {
+//     return view('homepage');
+// })->name('homepage');
+
+Route::get('/', [HomepageController::class, 'index'])->name('homepage');
 
 //promjena
 
