@@ -6,31 +6,31 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateChefsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('chefs', function (Blueprint $table) {
-            $table->id();
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('chefs', function (Blueprint $table) {
+			$table->id();
 			$table->string('name');
 			//enum sluzi da definise samo polja koja smiju da budu vrijednost kolone
-			$table->enum('activity',['active','deactive'])->default('active');
+			$table->enum('activity', ['active', 'deactive'])->default('active');
 			$table->unsignedBigInteger('pizza_id');
 			$table->foreign('pizza_id')->references('id')->on('pizzas');
-            $table->timestamps();
-        });
-    }
+			$table->timestamps();
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('chefs');
-    }
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::dropIfExists('chefs');
+	}
 }

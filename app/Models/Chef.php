@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Chef extends Model
 {
-    use HasFactory;
+	use HasFactory;
 
-	public function pizza(){
+	public function pizza()
+	{
 		//One to one relacija 
 		return $this->belongsTo(Chef::class);
 	}
