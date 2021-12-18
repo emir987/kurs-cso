@@ -19,12 +19,15 @@ use Illuminate\Support\Facades\Route;
 //     return view('homepage');
 // })->name('homepage');
 
-Route::get('/', [HomepageController::class, 'index'])->name('homepage');
-Route::get('/pizzas',[PizzasController::class,'getAllPizzas']);
-
-
 //promjena
 
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+//get,post,delete,put,patch,any,match
+
+Route::get('/', [HomepageController::class, 'index'])->name('homepage');
+Route::get('/pizzas',[PizzasController::class,'getAllPizzas']);
+Route::get('/pizzas/{id}',[PizzasController::class,'show']);
+Route::post('/pizzas',[PizzasController::class,'create']);
