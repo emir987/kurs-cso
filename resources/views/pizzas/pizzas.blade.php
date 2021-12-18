@@ -12,5 +12,9 @@
 		<input id="name" name="name" type="text">
 		<button type="submit" class="btn btn-primary">Potvrdi</button>
 	</form>
+	@error('name')	
+		{{$message}}
+	@enderror
+
 
 @endsection

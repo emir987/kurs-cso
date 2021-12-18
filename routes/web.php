@@ -26,8 +26,11 @@ Route::get('/about', function () {
 })->name('about');
 
 //get,post,delete,put,patch,any,match
+//ukoliko se radi any i match trebaju na kraju da budu
 
 Route::get('/', [HomepageController::class, 'index'])->name('homepage');
 Route::get('/pizzas',[PizzasController::class,'getAllPizzas']);
 Route::get('/pizzas/{id}',[PizzasController::class,'show']);
 Route::post('/pizzas',[PizzasController::class,'create']);
+Route::delete('/pizzas/{id}',[PizzasController::class,'delete']);
+Route::put('/pizzas/{id}',[PizzasController::class,'update']);
