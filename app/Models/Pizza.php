@@ -7,12 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pizza extends Model
 {
-    use HasFactory;
+	use HasFactory;
 
 	//polja koja smiju da se unesu u bazu sa web stranice, suprotno $guarded
-	protected $fillable=['name'];
+	protected $fillable = ['name'];
 
-	public function chef(){
+	public function chef()
+	{
 		//One to one relations 
 		return $this->hasOne(Chef::class);
 	}
